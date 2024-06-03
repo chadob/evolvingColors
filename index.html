@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Game Project Title Goes Here</title>
+  
+    <script type="text/javascript" src="./assetmanager.js"></script>
+    <script type="text/javascript" src="./timer.js"></script>
+    <script type="text/javascript" src="./plant.js"></script>
+    <script type="text/javascript" src="./animat.js"></script>
+    <script type="text/javascript" src="./automata.js"></script>
+    <script type="text/javascript" src="./gameengine.js"></script>
+    <script type="text/javascript" src="./util.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+</head>
+<body>
+    <div id="initSettings">
+        <span>Plant Time to Mature</span>
+        <label for="plantTime">0</label>
+        <input type="range" id="plantTime" min="1" max="100" value="1" step="1">
+        <label for="plantTime">100</label>
+        <span>Plant Hue Mutation</span>
+        <label for="plantDiff">0</label>
+        <input type="range" id="plantDiff" min="0" max="360" value="10" step="1">
+        <label for="plantDiff">360</label>
+        <span>Max Animat Energy</span>
+        <label for="animatMax">1</label>
+        <input type="range" id="animatMax" min="1" max="1000" value="1000" step="1">
+        <label for="animatMax">1000</label>
+        <span>Hue Mutation</span>
+        <label for="animatDiff">0</label>
+        <input type="range" id="animatDiff" min="0" max="360" value="10" step="1">
+        <label for="animatDiff">360</label>
+        <label for="animatMax">360</label>
+        <span>Width</span>
+        <label for="width">1</label>
+        <input type="range" id="width" min="1" max="1000" value="100" step="1">
+        <label for="width">1000</label>
+        <span>height</span>
+        <label for="height">1</label>
+        <input type="range" id="height" min="1" max="500" value="50" step="1">
+        <label for="height">500</label>
+        <button type="submit" id="submitSettings">Submit</button>
+    </div>
+    <canvas id="gameWorld" width="1000" height="500" style="background: white; border: 1px solid black" tabindex="0" autofocus></canvas>
+</body>
+</html>
