@@ -19,6 +19,7 @@ class Automata {
         for (let i = 0; i < 30; i++) {
             this.game.addEntity(new Animat(this.game, this, Math.random() * 359, this.animatDiff, this.animatTime, Math.ceil(this.width /2), Math.ceil(this.height/2)))
         }
+        this.game.addEntity(new Animat(this.game, this, 180, this.animatDiff, this.animatTime, Math.ceil(this.width /2), Math.ceil(this.height/2)))
         
     }
     addPlant(plant, x, y) {
