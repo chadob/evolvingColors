@@ -4,7 +4,7 @@ class Animat {
         this.automata = automata;
         this.hue = hue;
         this.mutation = mutation;
-        this.picky = 20;
+        this.picky = 5;
         this.energy = 0;
         this.maxEnergy = maxEnergy;
         this.x = x;
@@ -91,7 +91,7 @@ class Animat {
             this.mutate();
         }
         //Die if energy is < 0 or if unlucky
-        if (this.energy < 0 || Math.random() < .001) {
+        if (this.energy < 0 || Math.random() < .01) {
             this.die();
         }
     }        
@@ -113,8 +113,7 @@ class Animat {
     }
 
     mutate() {
-        console.log("mutated")
-        let newHue = this.hue + this.mutation;
+        let newHue = (this.hue + this.mutation) % 360;
         this.game.addEntity(new Animat(this.game, this.automata, newHue, this.mutation, this.maxEnergy, this.x, this.y));
     }
     die() {

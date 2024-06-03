@@ -14,9 +14,9 @@ class Plant {
         let flippedCoin = Math.random();
         let newHue = this.hue;
         if (flippedCoin > .5) {
-            newHue += mutateDifference;
+            newHue = (newHue + mutateDifference) % 360;
         } else {
-            newHue -= mutateDifference;
+            newHue = (newHue - mutateDifference) % 360;
         }
         if (this.automata.plants[(this.y-1 + this.automata.height) % this.automata.height][(this.x-1 + this.automata.width) % this.automata.width] === null) {
             let newPlant = new Plant(this.game, this.automata, (this.x-1 + this.automata.width) % this.automata.width, (this.y-1 + this.automata.height) % this.automata.height, newHue, this.mutation, this.maxEnergy);
@@ -70,7 +70,7 @@ class Plant {
             this.energy = 0;
         }
         this.energy+=1;
-        if (Math.random() < .001) {
+        if (Math.random() < .01) {
             this.die();
         }
     }

@@ -103,7 +103,7 @@ class GameEngine {
         if(this.running) {
             this.clockTick = this.timer.tick();
             this.tick += this.clockTick;
-            if (this.tick >= .1) {
+            if (this.tick >= .3) {
                 this.update();
                 this.draw();
                 this.tick = 0;
