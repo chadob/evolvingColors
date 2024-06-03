@@ -16,9 +16,10 @@ class Automata {
         this.tickCount = 0;
         this.ticks = 0;
         this.addPlant(new Plant(this.game, this, 0, 0, 180, this.plantDiff, this.plantTime), 0,0);
-        this.game.addEntity(new Animat(this.game, this, Math.random() * 180, this.animatDiff, this.animatTime, Math.ceil(this.width /2), Math.ceil(this.height/2)))
-        this.game.addEntity(new Animat(this.game, this, Math.random() * 180, this.animatDiff, this.animatTime, 0, this.height - 1))
-        this.game.addEntity(new Animat(this.game, this, Math.random() * 180, this.animatDiff, this.animatTime, this.width - 1, this.height - 1))
+        for (let i = 0; i < 30; i++) {
+            this.game.addEntity(new Animat(this.game, this, Math.random() * 359, this.animatDiff, this.animatTime, Math.ceil(this.width /2), Math.ceil(this.height/2)))
+        }
+        
     }
     addPlant(plant, x, y) {
         this.plants[y][x] = plant;
